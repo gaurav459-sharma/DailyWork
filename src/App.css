@@ -1,12 +1,24 @@
 .App {
+  /* border: 2px solid black; */
   text-align: center;
   min-height: 100vh;
   color: white;
-  background-image: linear-gradient(79deg,rgb(95, 142, 229),rgb(232, 55, 226),rgb(234, 161, 24));
+  background-image: linear-gradient(79deg,rgb(209, 212, 218),rgb(232, 223, 232),rgb(187, 186, 184));
+
 }
+.nova{
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; 
+/* border: 2px solid black; */
+margin-left: -17px;
+}
+
 .main{
   display: flex;
   align-items: flex-start;
+  margin: 100px;
 
 }
 .sidebar{
@@ -72,6 +84,7 @@ button{
   border-radius: 10px;
   cursor: pointer;
   color: blueviolet;
+  margin-top: 20px;
 }
 
 .link-btn{

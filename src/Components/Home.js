@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const navigate = useNavigate();
-  useEffect(() => {
-    if(!localStorage.getItem('user')){
-        navigate(-1);
-    }
-  });
+  // useEffect(() => {
+  //   if(!localStorage.getItem('user')){
+  //       navigate(-1);
+  //   }
+  // });
 
   const handleLogOut = (e) => {
     e.preventDefault();
