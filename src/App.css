@@ -1,28 +1,43 @@
 .App {
   text-align: center;
-  display: flex;
   min-height: 100vh;
-  align-items: center;
-  /* justify-content: center; */
   color: white;
   background-image: linear-gradient(79deg,rgb(95, 142, 229),rgb(232, 55, 226),rgb(234, 161, 24));
 }
 .main{
-  display: flex
-
-}
-.sidebar{
-  width: 40%;
-  flex-direction: column;
-  text-align: left;
+  display: flex;
   align-items: flex-start;
 
 }
+.sidebar{
+  width: 50%;
+  flex-direction: column;
+  text-align: left;
+  /* border: 2px solid blanchedalmond; */
+ 
 
-.auth-form-container,.login-form,.register-form{
+}
+.parent-login{
+  width: 50%;
+  border: 2px solid white;
+  padding: 5rem;
+  border-radius: 10px;
+  margin: 0.5rem;
+  
+
+}
+
+.auth-form-container{
+  width:50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-form,.register-form{
   display: flex;
   flex-direction: column;
- 
+  
+
 
  
 }
@@ -30,7 +45,7 @@
 @media screen and (min-width:600px) {
   .auth-form-container{
     padding: 5rem;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     border-radius: 10px;
     margin: 0.5rem;
     
@@ -47,12 +62,13 @@ input{
   padding: 1rem;
   border: none;
   border-radius: 10px;
+  color: black;
 }
 
 button{
   border:none;
   background-color: white;
-  padding: 20px;
+  padding: 12px;
   border-radius: 10px;
   cursor: pointer;
   color: blueviolet;
@@ -62,6 +78,7 @@ button{
   background: none;
   color: white;
   text-decoration: underline;
+  padding-bottom: 1px
 
 
 }
