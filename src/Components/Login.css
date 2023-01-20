@@ -1,0 +1,52 @@
+
+.login-form,.register-form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 3em 3em 0.5em 3em;
+  }
+   
+  .parent_login{
+    width: 80%;
+    border: 2px solid #424242;
+    border-radius: 10px;
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .parent_login>h2{
+    text-align: center;
+  }
+  
+  label{
+    text-align: left;
+    padding: 0.25rem 0;
+  
+  }
+  input{
+    margin:0;
+    width: 100%;
+    padding: 1rem;
+    border: none; 
+    height: 1.3em;
+    border-radius: 10px;
+  }
+  
+  button{
+    border:none;
+    background-color: white;
+    padding: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 1em;
+    color: blueviolet;
+  }
+  
+  .link-btn{
+    display: block;
+    text-align: center;
+    background: none;
+    color: #424242;
+    text-decoration: underline;
+    
+  }

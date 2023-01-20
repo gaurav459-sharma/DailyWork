@@ -1,0 +1,22 @@
+.nav_page,.common{
+    padding-left: 2rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    background-color: #212121;
+}
+ul{
+    list-style: none;
+}
+ul>li{
+    margin-right: 2em;
+}
+
+.common{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.rgt{
+    position:absolute;
+    right: 0;
+}

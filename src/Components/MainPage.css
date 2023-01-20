@@ -1,0 +1,26 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    padding-top: 3em;
+  }
+  .main_left{
+    width: 50%;
+    text-align: center;
+  }
+  
+  .main_right{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+  }
+
+  @media screen and (min-width:600px) {
+    .main_right{
+      width: 50%;
+      padding: 5rem;
+      border-radius: 10px;
+      margin: 0.5rem;
+      
+    }
+  }
