@@ -3,7 +3,7 @@
   text-align: center;
   min-height: 100vh;
   color: white;
-  background-image: linear-gradient(79deg,rgb(209, 212, 218),rgb(232, 223, 232),rgb(187, 186, 184));
+  background-image: linear-gradient(75deg,rgb(126, 157, 219),rgb(150, 233, 219),rgb(206, 140, 228));
 
 }
 .nova{
@@ -15,83 +15,3 @@
 margin-left: -17px;
 }
 
-.main{
-  display: flex;
-  align-items: flex-start;
-  margin: 100px;
-
-}
-.sidebar{
-  width: 50%;
-  flex-direction: column;
-  text-align: left;
-  /* border: 2px solid blanchedalmond; */
- 
-
-}
-.parent-login{
-  width: 50%;
-  border: 2px solid white;
-  padding: 5rem;
-  border-radius: 10px;
-  margin: 0.5rem;
-  
-
-}
-
-.auth-form-container{
-  width:50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.login-form,.register-form{
-  display: flex;
-  flex-direction: column;
-  
-
-
- 
-}
-
-@media screen and (min-width:600px) {
-  .auth-form-container{
-    padding: 5rem;
-    /* border: 1px solid white; */
-    border-radius: 10px;
-    margin: 0.5rem;
-    
-  }
-}
-
-label{
-  text-align: left;
-  padding: 0.25rem 0;
-
-}
-input{
-  margin: 0.5rem 0;
-  padding: 1rem;
-  border: none;
-  border-radius: 10px;
-  color: black;
-}
-
-button{
-  border:none;
-  background-color: white;
-  padding: 12px;
-  border-radius: 10px;
-  cursor: pointer;
-  color: blueviolet;
-  margin-top: 20px;
-}
-
-.link-btn{
-  background: none;
-  color: white;
-  text-decoration: underline;
-  padding-bottom: 1px
-
-
-}

@@ -1,0 +1,43 @@
+.main{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    /* border: 2px solid blanchedalmond; */
+  
+  }
+  .leftbar{
+    width: 50%;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 15px;
+    /* border: 2px solid blanchedalmond; */
+   
+  
+  }
+.rightbar{
+    margin-top: 100px;
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid blanchedalmond; */
+
+  }
+
+  
+  @media screen and (min-width:600px) {
+    .rightbar{
+      padding: 5rem;
+      /* border: 1px solid white; */
+      border-radius: 10px;
+      margin: 0.5rem;
+      
+    }
+  }
+  #backimage{
+    height: 30rem;
+    width: 40rem;
+    border: 5px solid white;
+    
+  }
+  
