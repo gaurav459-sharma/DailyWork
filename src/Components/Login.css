@@ -1,25 +1,21 @@
-.parent-login{
-    width: 80%;
-    border: 2px solid white;
-    padding: 3rem;
-    border-radius: 10px;
-    margin-bottom: 3px;
-  }
-  
-  .login-form,.register-form{
+
+.login-form,.register-form{
     display: flex;
     flex-direction: column;
-    
+    text-align: center;
+    margin: 3em 3em 0.5em 3em;
+  }
+   
+  .parent_login{
+    width: 80%;
+    border: 2px solid #424242;
+    border-radius: 10px;
+    margin: 0.5rem;
+    padding: 1rem;
   }
   
-  @media screen and (min-width:600px) {
-    .auth-form-container{
-      padding: 5rem;
-      /* border: 1px solid white; */
-      border-radius: 10px;
-      margin: 0.5rem;
-      
-    }
+  .parent_login>h2{
+    text-align: center;
   }
   
   label{
@@ -28,28 +24,29 @@
   
   }
   input{
-    margin: 0.5rem 0;
+    margin:0;
+    width: 100%;
     padding: 1rem;
-    border: none;
+    border: none; 
+    height: 1.3em;
     border-radius: 10px;
-    color: black;
   }
   
   button{
     border:none;
     background-color: white;
-    padding: 12px;
+    padding: 6px;
     border-radius: 10px;
     cursor: pointer;
+    margin-top: 1em;
     color: blueviolet;
-    margin-top: 20px;
   }
   
   .link-btn{
+    display: block;
+    text-align: center;
     background: none;
-    color: white;
+    color: #424242;
     text-decoration: underline;
-    padding-bottom: 1px
-  
-  
+    
   }

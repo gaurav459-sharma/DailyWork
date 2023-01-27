@@ -1,19 +1,26 @@
-.Nav-bar{
+.nav_page,.common{
+    padding-left: 2rem;
+    height: 3rem;
     display: flex;
-    margin-left: 15px;
+    align-items: center;
+    background-color: #212121;
+   
 }
-.logo h3{
-   display:inline-block;
+ul{
+    list-style: none;
 }
-.nav-links{
-    display: inline;
-}
-ul li{
-    display: inline;
-    margin: 30px;
+ul>li{
+    margin-right: 2em;
 }
 
-.signin{
-    position: absolute;
-    right: 2px;
+.common{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.rgt{
+    position:absolute;
+    right: 0;
+}
+.navbar_main{
+    
 }

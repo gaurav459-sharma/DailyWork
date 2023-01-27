@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,props } from "react";
 import './Login.css';
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 const client = axios.create({
     baseURL: 'http://localhost:5000/users'
 });
-export const Login = (props) => {
+export const Login = () => {
     const [user, setUser] = useState({
         email: '',
         password: ''
@@ -41,8 +41,8 @@ export const Login = (props) => {
 
 
     return (
-        <div className="">
-            <div className="parent-login">
+        <div>
+            <div className="parent_login">
                 <h2>Login</h2>
                 <form className="login-form" onSubmit={handleSubmit}>
                     <label htmlFor="email">Email</label>
@@ -51,7 +51,7 @@ export const Login = (props) => {
                     <input value={user.password} onChange={(e) => handleChanage(e)} type="password" placeholder="********" id="password" name="password" />
                     <button type="submit">Log In</button>
                 </form>
-                <Link to='/register'>Don't have an account? Register here.</Link>
+                <Link to='/register' className="link-btn"> Register here.</Link>
             </div>
         </div>
     )

@@ -1,0 +1,63 @@
+
+.text, .state , .subject {
+    width: 100%; 
+    padding: 12px;  
+    border: 1px solid #ccc; 
+    border-radius: 15px; 
+    box-sizing: border-box; 
+    margin-top: 6px;
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+  
+
+#button {
+  display: block;
+    background-color: #70b3da;
+    color: white;
+    text-align: center;
+    width: 50%;
+    padding:5px;
+    border: none;
+    border-radius: 4px;
+    margin: auto;
+   
+  }
+  
+ 
+ #button:hover {
+    background-color: #0b0e0b;
+  }
+  
+  
+  .personal_form {
+    width: 35%;
+    border-radius: 5px;
+    background-color: #feffff;
+    padding: 50px;
+    margin:auto;
+
+  }
+  .gender{
+   margin-left: -48%;
+    
+  }
+  .gend{
+    display: flex;
+  }
+  .mf{
+    margin-left: -42%;
+  }
+  #ml{
+    display: block;
+  }
+ #fileselect{
+    width: 80%; 
+    height: 50px; 
+    font-size: 18px; 
+   margin-top: 10px;
+   overflow-y: visible;
+   
+  
+
+ }

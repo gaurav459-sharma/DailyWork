@@ -33,8 +33,8 @@ export const Register = (props) => {
     }
 
     return (
-        <div >
-            <div className="parent-login">
+        <div>
+            <div className="parent_login">
                 <h2>Register</h2>
                 <form className="register-form" onSubmit={handleSubmit}>
                     <label htmlFor="name">Full name</label>
@@ -45,9 +45,8 @@ export const Register = (props) => {
                     <input value={password} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
                     <button type="submit">Register</button>
                 </form>
-                <Link to='/' className="link-btn">Already have an account? Login here.</Link>
+                <Link to='/' className="link-btn">Login here.</Link>
             </div>
-
-        </div >
+        </div>
     )
 }
