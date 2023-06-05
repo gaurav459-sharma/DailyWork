@@ -9,6 +9,10 @@ import Footer from "./Components/Footer";
 import MainPage from "./Components/MainPage";
 import Personal from "./Components/personal_Info/Personal";
 import Contact from "./Components/contactus/Contact";
+import JobSection from "./Components/job_section/JobSection";
+import AboutUs from "./Components/about_us/AboutUs";
+import Application from "./Components/Application_form/Application";
+import UserBoard from "./Components/UsersBoard/UserBoard";
 
 function App() {
   return (
@@ -24,6 +28,10 @@ function App() {
           <Route path="/foot" element={<Footer/>}/> 
           <Route path="/Personal" element={<Personal/>}/> 
           <Route path="/contact" element={<Contact/>}/> 
+          <Route path="/jobsection" element={<JobSection/>}/> 
+          <Route path="/aboutus" element={<AboutUs/>}/> 
+          <Route path="/Application" element={<Application/>}/> 
+          <Route path="/UserBoard" element={<UserBoard/>}/> 
         </Routes>
         <Footer/>
       </BrowserRouter>

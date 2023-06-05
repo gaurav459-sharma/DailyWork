@@ -7,14 +7,15 @@ const Navbar = () => {
         <div className='navbar_main'>
             <nav className='nav_page'>
                 <div>
-                    <Link to="/">Berozgaar</Link>
+                    <Link to="/">DailyWork</Link>
                 </div>
                 <ul className='common lft'>
 
                 </ul>
                 <ul className='common rgt'>
                     <li ><Link to="/">Home</Link></li>
-                    <li><Link to="/">Page 1</Link></li>
+                    <li ><Link to="/UserBoard">Hire</Link></li>
+                    <li><Link to="/jobsection">Jobs</Link></li>
                     <li><Link to="/personal">personal</Link></li>
                     <li><Link to="/register"><span ></span> Sign Up</Link></li>
                     <li><Link to="/"><span ></span> Login</Link></li>

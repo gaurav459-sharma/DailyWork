@@ -11,7 +11,7 @@ const Contact = () => {
         <div class="contact_details">
           <i class="fas fa-map-marker-alt"></i>
           <div class="topic">Address</div>
-          <div class="text_one">Surkhet, NP12</div>
+          <div class="text_one">Mathura,UP</div>
         </div>
 
         <div class="contact_details">
@@ -23,7 +23,7 @@ const Contact = () => {
         <div class="contact_details">
           <i class="fas fa-envelope"></i>
           <div class="topic">Email</div>
-          <div class="text_one">codinglab@gmail.com</div>
+          <div class="text_one">dailywork@gmail.com</div>
         </div>
       </div>
 

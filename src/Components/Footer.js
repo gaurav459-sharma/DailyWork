@@ -68,7 +68,7 @@ const Footer = () => {
                                 </div>
                             </div>
                             <ul class="list-unstyled collapse" id="Company">
-                                <li><a href="#">About</a></li>
+                                <li><Link to='/aboutus' >About Us</Link></li>
                                 <li><a href="#">Careers</a></li>
                                 <li><a href="#">Support</a></li>
                                 <li><a href="#">Pricing</a></li>

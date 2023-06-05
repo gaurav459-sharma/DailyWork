@@ -1,0 +1,51 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Application_container{
+    width: 50%;
+    border-radius: 5px;
+    background-color: #feffff;
+    padding: 50px;
+    margin:auto;
+}
+.two_cols label{
+  display: block;
+  width: 50%;
+}
+.application_text{
+
+  width: 80%; 
+  padding: 14px;  
+  border: 1px solid #ccc; 
+  border-radius: 15px; 
+  box-sizing: border-box; 
+  margin-top: 6px;
+  margin-bottom: 16px; 
+  resize: vertical 
+}
+.application_doc{
+padding: 30px;
+margin:-15px;
+width: 100%;
+}
+.application_submit{
+  
+  /* padding: 20px; */
+  padding-top: 0.8rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  border-radius: 15px;
+  border: 1px solid #ccc; 
+  width: 6rem;
+}
+.application_submit:hover{
+  background-color: rgb(177, 176, 175);
+}
