@@ -1,5 +1,5 @@
 
-.text, .state , .subject {
+.text, .state , .subject, .interest{
     width: 100%; 
     padding: 12px;  
     border: 1px solid #ccc; 
@@ -51,7 +51,7 @@
   #ml{
     display: block;
   }
- #fileselect{
+ #upload{
     width: 80%; 
     height: 50px; 
     font-size: 18px; 

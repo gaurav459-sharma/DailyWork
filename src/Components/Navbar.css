@@ -4,7 +4,6 @@
     display: flex;
     align-items: center;
     background-color: #212121;
-   
 }
 ul{
     list-style: none;
@@ -23,4 +22,30 @@ ul>li{
 }
 .navbar_main{
     
+}
+
+.availability_toggle{
+    height: 1.5em;
+    width: 3em;
+    padding: 2px;
+    display: inline;
+    border: whitesmoke 2px solid;
+    border-radius: 3em;
+}
+
+.toggle_shape{
+    width: 50%;
+    height: 100%;
+    border-radius: 2em;
+}
+
+.not_available{
+    border: red 1px solid;
+    background-color: rgb(198, 6, 6);
+}
+
+.available{
+    border: green 1px solid;
+    background-color: rgb(4, 152, 4);
+    float: right;
 }

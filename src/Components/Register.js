@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const client = axios.create({
@@ -11,6 +11,14 @@ export const Register = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPass] = useState('');
     const [user_name, setName] = useState('');
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (localStorage.getItem("user")) {
+            navigate(-1);
+        }
+    }, []);
 
     const handleSubmit = (e) => {
         const data = {
@@ -25,10 +33,12 @@ export const Register = (props) => {
 
     const handleResponse = (res) => {
         if (res.status === 201) {
+            // localStorage.setItem('user', email);
             alert('user created successfully');
             setEmail('');
             setPass('');
             setName('');
+            navigate("/");
         } else alert('error occurred!');
     }
 

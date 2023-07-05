@@ -1,24 +1,45 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { useAuthState } from '../context';
 
 function Home() {
-  const navigate = useNavigate();
-  // useEffect(() => {
-  //   if(!localStorage.getItem('user')){
-  //       navigate(-1);
+  const authState = useAuthState();
+  // const [userData, setUserData] = useState(
+  //   {
+  //     "_id":"",
+  //     "first_name":"",
+  //     "last_name":"",
+  //     "email":"",
+  //     "phone":"",
+  //     "gender":"",
+  //     "dob":"",
+  //     "state":"",
+  //     "pin":'',
+  //     "upload":"",
+  //     "subject":"",
+  //     "createdAt":"",
+  //     "updatedAt":"",
+  //     "__v":''
   //   }
-  // });
+  // );
 
-  const handleLogOut = (e) => {
-    e.preventDefault();
-    localStorage.removeItem('user');
-    //alert('Logged Out');
-    navigate('/');
-  }
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (authState.currentUser === "") {
+      navigate(-1);
+    }
+  }, []);
+
   return (
     <div>
-        <button onClick={(e) => handleLogOut(e)}> LogOut </button>
-        <h1> WelCome : {localStorage.getItem('user')}</h1>
+      {/* <button onClick={(e) => handleLogOut(e)}> LogOut </button> */}
+      <h1> Hello : {localStorage.getItem('currentUser')}</h1>
+      <h1> Hello : {localStorage.getItem('currentUser')}</h1>
+      <h1> Hello : {localStorage.getItem('currentUser')}</h1>
+      <h1> Hello : {localStorage.getItem('currentUser')}</h1>
+      <h1> Hello : {localStorage.getItem('currentUser')}</h1>
+      <h1> Hello : {localStorage.getItem('currentUser')}</h1>
     </div>
   )
 }
