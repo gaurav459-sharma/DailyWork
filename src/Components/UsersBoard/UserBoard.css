@@ -1,0 +1,114 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.user_card_heading a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+.user_card_heading a:hover {
+    text-decoration: underline;
+  }
+
+  
+.user_container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+   
+  }
+  .user_search {
+    margin: 16px auto;
+    padding: 16px 64px 24px 64px;
+    background-color: var(--search-bg);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  }
+  .user_search h2 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+.user_search form {
+    text-align: center;
+    font-size: 16px;
+  }
+  .user_search input{
+    font: inherit;
+    padding: 12px;
+    width: 40%;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+  .user_search button {
+    font: inherit;
+    padding: 5px 12px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 4px;
+  }
+.user_listing {
+    background-color: #fff;
+    padding: 24px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  }
+  .user_listing_heading {
+    font-size: 16px;
+    color: #050505;
+    margin-bottom: 16px;
+  }
+ .user_listing_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 8px;
+    grid-row-gap: 24px;
+    list-style: none;
+  }
+  .user_card {
+    background-color: white;
+    padding: 16px;
+    border: solid 1px #ccc;
+    max-width: 260px;
+    border-radius: 2px;
+    }
+    .user_card_logo {
+        border-radius: 2px;
+        height: 64px;
+        width: 64px;
+        margin: 4px 0;
+    }
+    .user_card_heading {
+        color: #222;
+        font-weight: bold;
+        line-height: 1.5;
+        font-size: 16px;
+    }
+      .user_card_text {
+        color: #666;
+        font-size: 14px;
+    }
+    .user_card_text_small {
+        font-size: 12px;
+    }
+    .user_card_separator {
+        width: 32px;
+        border: none;
+        border-top: 1px solid #ccc;
+        height: 1px;
+        margin: 8px 0;
+      }
+    .user_rating{
+        border-radius: 2px;
+        height: 100px;
+        width: 50%;
+        margin: -50px 0 0 -30px;
+       
+    }

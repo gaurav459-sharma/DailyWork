@@ -8,22 +8,22 @@ const Contact = () => {
 
         <div className="contact_leftside">
 
-          <div className="contact_details">
-            <i className="fas fa-map-marker-alt"></i>
-            <div className="topic">Address</div>
-            <div className="text_one">Surkhet, NP12</div>
+          <div class="contact_details">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="topic">Address</div>
+            <div class="text_one">Mathura,UP</div>
           </div>
 
-          <div className="contact_details">
-            <i className="fas fa-phone-alt"></i>
-            <div className="topic">Phone</div>
-            <div className="text_one">+0098 9893 5647</div>
+          <div class="contact_details">
+            <i class="fas fa-phone-alt"></i>
+            <div class="topic">Phone</div>
+            <div class="text_one">+0098 9893 5647</div>
           </div>
 
-          <div className="contact_details">
-            <i className="fas fa-envelope"></i>
-            <div className="topic">Email</div>
-            <div className="text_one">codinglab@gmail.com</div>
+          <div class="contact_details">
+            <i class="fas fa-envelope"></i>
+            <div class="topic">Email</div>
+            <div class="text_one">dailywork@gmail.com</div>
           </div>
         </div>
 
