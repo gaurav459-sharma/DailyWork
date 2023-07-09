@@ -21,7 +21,7 @@ Our mission is to make the process of finding daily work easier and more accessi
 <br />  <br />
 Join DailyWork today and experience a simplified job searching process. Whether you're looking for work or need to hire capable individuals, we are here to support you every step of the way. Together, let's bridge the gap between job seekers and employers, fostering economic growth and prosperity in our local communities.</p>
         <div className="data">
-        <Link className="hire" to='/contact' >Contact Us</Link>
+        <Link className="hire" to='/contact'  style={{textDecoration:"none"}} >Contact Us</Link>
         </div>
       </div>
     </div>
