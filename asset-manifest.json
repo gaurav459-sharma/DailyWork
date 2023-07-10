@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/WorkHunt/static/css/main.1590f26d.css",
-    "main.js": "/WorkHunt/static/js/main.9515a90a.js",
-    "static/js/787.276498f2.chunk.js": "/WorkHunt/static/js/787.276498f2.chunk.js",
-    "static/media/logo.svg": "/WorkHunt/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/WorkHunt/index.html",
-    "main.1590f26d.css.map": "/WorkHunt/static/css/main.1590f26d.css.map",
-    "main.9515a90a.js.map": "/WorkHunt/static/js/main.9515a90a.js.map",
-    "787.276498f2.chunk.js.map": "/WorkHunt/static/js/787.276498f2.chunk.js.map"
+    "main.css": "/DailyWork/static/css/main.4d8d33df.css",
+    "main.js": "/DailyWork/static/js/main.020d2aea.js",
+    "static/js/787.276498f2.chunk.js": "/DailyWork/static/js/787.276498f2.chunk.js",
+    "static/media/hearthands-460x250.png": "/DailyWork/static/media/hearthands-460x250.a1a0a4bb3445a082441f.png",
+    "static/media/teamsimage.png": "/DailyWork/static/media/teamsimage.2713a66763d992e1f0a4.png",
+    "static/media/working at dailyWork.webp": "/DailyWork/static/media/working at dailyWork.00230b1d991a3a9d9e75.webp",
+    "static/media/ourvalues.avif": "/DailyWork/static/media/ourvalues.b2b5eb4462b3b485f313.avif",
+    "static/media/laptop-coffee-2-460x250.jpg": "/DailyWork/static/media/laptop-coffee-2-460x250.deb4ada55f016efdc4eb.jpg",
+    "index.html": "/DailyWork/index.html",
+    "main.4d8d33df.css.map": "/DailyWork/static/css/main.4d8d33df.css.map",
+    "main.020d2aea.js.map": "/DailyWork/static/js/main.020d2aea.js.map",
+    "787.276498f2.chunk.js.map": "/DailyWork/static/js/787.276498f2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1590f26d.css",
-    "static/js/main.9515a90a.js"
+    "static/css/main.4d8d33df.css",
+    "static/js/main.020d2aea.js"
   ]
 }
