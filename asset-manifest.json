@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DailyWork/static/css/main.4d8d33df.css",
-    "main.js": "/DailyWork/static/js/main.020d2aea.js",
+    "main.js": "/DailyWork/static/js/main.5254e8bc.js",
     "static/js/787.276498f2.chunk.js": "/DailyWork/static/js/787.276498f2.chunk.js",
     "static/media/hearthands-460x250.png": "/DailyWork/static/media/hearthands-460x250.a1a0a4bb3445a082441f.png",
     "static/media/teamsimage.png": "/DailyWork/static/media/teamsimage.2713a66763d992e1f0a4.png",
@@ -10,11 +10,11 @@
     "static/media/laptop-coffee-2-460x250.jpg": "/DailyWork/static/media/laptop-coffee-2-460x250.deb4ada55f016efdc4eb.jpg",
     "index.html": "/DailyWork/index.html",
     "main.4d8d33df.css.map": "/DailyWork/static/css/main.4d8d33df.css.map",
-    "main.020d2aea.js.map": "/DailyWork/static/js/main.020d2aea.js.map",
+    "main.5254e8bc.js.map": "/DailyWork/static/js/main.5254e8bc.js.map",
     "787.276498f2.chunk.js.map": "/DailyWork/static/js/787.276498f2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4d8d33df.css",
-    "static/js/main.020d2aea.js"
+    "static/js/main.5254e8bc.js"
   ]
 }
