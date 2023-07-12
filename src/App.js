@@ -26,6 +26,7 @@ function App() {
             <Route exact path="/" element={<MainPage><Login /></MainPage>} />
             <Route path="/register" element={<MainPage><Register /></MainPage>} />
             <Route path="/home" element={<Home />} />
+            <Route path="/DailyWork" element={<MainPage><Login /></MainPage>} />
             <Route path="/nav" element={<Navbar />} />
             <Route path="/foot" element={<Footer />} />
             <Route path="/Personal" element={<Personal />} />
