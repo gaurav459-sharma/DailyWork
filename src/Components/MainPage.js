@@ -14,14 +14,14 @@ const MainPage = (props) => {
         <>
         <div className="main">
             <div className="main_left">
-                <h1>Want to find a Work?</h1>
+                {/* <h1>Want to find a Work?</h1>
                 <img id="back_image"src={nit}/>
                 <div class="bottom-left">
                 <h2>Search at DailyWork</h2>
-                </div>
+                </div> */}
             </div>
             <div className="main_right">
-                {props.children}
+                {/* {props.children} */}
             </div>
         </div>
 
@@ -35,14 +35,14 @@ const MainPage = (props) => {
 
         <div className="ourValues">
             
-            <span className="has-image">
+            {/* <span className="has-image">
                 <img className='our_values_img' src={ourvalues} alt="ourValues" />
 
                 <span className="values_content">
                 <h1>Our Values</h1>
                 <p>At DailyWork, our values are deeply rooted in our commitment to prioritize the needs of job seekers and employers. We are driven by a student-first approach, always putting their interests at the forefront. We are one team – we are DailyWork.</p>
             </span>
-            </span> 
+            </span>  */}
         </div>
         <div className="ourTeams">
         <span className="teams_content">

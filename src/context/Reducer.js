@@ -7,7 +7,8 @@ const userDetails = localStorage.getItem("userDetails")
 console.log(userDetails);
 export const initialState = {
     auth : isAuth,
-    userDetails: ""| userDetails,
+    userDetails: userDetails,
+    available:false,
     loading: false,
     errorMessage: null
 }
@@ -30,6 +31,11 @@ export const AuthReducer = (initialState, action) => {
                 ...initialState,
                 userDetails: action.payload,
                 loading: false
+            };
+        case "SET_AVAILABILITY":
+            return {
+                ...initialState,
+                available : action.payload
             };
         case "LOGOUT":
             return {

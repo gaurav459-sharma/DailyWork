@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Personal.css'
 import axios from 'axios';
-import { useAuthDispatch } from '../../context';
+import { useAuthDispatch, logout } from '../../context/index';
 
 const client = axios.create({
     baseURL: 'http://localhost:5000/users'
@@ -29,9 +29,9 @@ const Personal = () => {
 
 
     useEffect(() => {
-        if (localStorage.getItem("user")) {
-            navigate(-1);
-        }
+        // if (localStorage.getItem("user")) {
+        //     navigate(-1);
+        // }
         let userData = localStorage.getItem("userDetails");
         if(userData){
             userData = JSON.parse(userData);
@@ -79,9 +79,10 @@ const Personal = () => {
 
     const handleResponse = (res) => {
         if (res.status === 201) {
-            dispatch({type : "SET_DETAILS", payload : userDetails});
-            localStorage.setItem("userDetails", JSON.stringify(userDetails));
+            // dispatch({type : "SET_DETAILS", payload : userDetails});
+            // localStorage.setItem("userDetails", JSON.stringify(userDetails));
             alert("personal details updated...");
+            logout();
             navigate('/home');
         } else {
             alert("Some error occurred...");

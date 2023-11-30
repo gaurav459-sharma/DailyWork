@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Login } from './Components/Login';
-import { Register } from "./Components/Register";
+import Login from './Components/Login';
+import Register from "./Components/Register";
 import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
 import './App.css';
@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <AuthProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/workhunt">
           <div className='nav_component'><Navbar /></div>
           <Routes>
             <Route exact path="/" element={<MainPage><Login /></MainPage>} />

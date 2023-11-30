@@ -3,11 +3,12 @@ import './Login.css';
 import { Link, useNavigate } from "react-router-dom";
 import { loginUSer, useAuthDispatch } from "../context/index";
 
-export const Login = () => {
+const Login = ({ onClose, closeModal }) => {
+    const [open, setOpen] = useState(false);
     const dispatch = useAuthDispatch();
     const navigate = useNavigate();
     useEffect(() => {
-        if (localStorage.getItem("user")) {
+        if (localStorage.getItem("userDetails")) {
             navigate('/home');
         }
     }, []);
@@ -39,6 +40,7 @@ export const Login = () => {
     const handleResponse = (res) => {
         if (res.status === 200) {
             localStorage.setItem("currentUser", user.email);
+            closeModal();
             alert("successfull login!");
             navigate('/home');
         } else if (res.status === 202) {
@@ -51,16 +53,26 @@ export const Login = () => {
     return (
         <div>
             <div className="parent_login">
-                <h2>Login</h2>
+                <h4>Please Login To Continue</h4>
                 <form className="login-form" onSubmit={handleSubmit}>
-                    <label htmlFor="email">Email</label>
-                    <input value={user.email} onChange={(e) => handleChanage(e)} type="email" placeholder="abc@xyz.com" id="email" name="email" />
-                    <label htmlFor="password">Password</label>
-                    <input value={user.password} onChange={(e) => handleChanage(e)} type="password" placeholder="********" id="password" name="password" />
-                    <button type="submit">Log In</button>
+                    <div className="form_input">
+                        <input value={user.email} onChange={(e) => handleChanage(e)} type="email" placeholder="Email" id="email" name="email" />
+                    </div>
+
+                    <div className="form_input">
+                        <input value={user.password} onChange={(e) => handleChanage(e)} type="password" placeholder="Password********" id="password" name="password" />
+                    </div>
+
+                    <div className="form_input">
+                        <button type="submit">Log In</button>
+                    </div>
                 </form>
-                <Link to='/register' className="link-btn"> Register here.</Link>
+
+                <Link className="link-btn" onClick={() => onClose()}> Register here.</Link>
             </div>
+
         </div>
     )
 }
+
+export default Login;

@@ -15,6 +15,7 @@ export const loginUSer = async (dispatch, loginDetails) => {
         if (response.status === 200) {
             dispatch({type : "LOGIN_SUCCESS", payload : true});
             await setUserDetails(dispatch, loginDetails.email);
+            // await setAvailability(dispatch);
             return response;
         }
 
@@ -33,7 +34,7 @@ export const logout = async (dispatch) => {
     localStorage.removeItem("userDetails");
 }
 
-export const setUserDetails = async (dispatch, email) => {
+const setUserDetails = async (dispatch, email) => {
     try {
         let response = await client.get(`/personal/${email}`);
         let data = response.data;
@@ -44,6 +45,22 @@ export const setUserDetails = async (dispatch, email) => {
         }
         dispatch({ type: 'LOGIN_ERROR', error: data.errors[0] });
         return;
+    } catch (error) {
+        console.log(error)
+        dispatch({ type: 'LOGIN_ERROR', error: error });
+    }
+}
+
+const setAvailability = async (dispatch) => {
+    const userData = JSON.parse(localStorage.getItem("userDetails"));
+    try {
+        const id = userData._id;
+        let res = client.get(`/checkavailable/${id}`);
+        if(res.data){
+            dispatch({type:'SET_AVAILABILITY', payload : true});
+        }else{
+            dispatch({type:'SET_AVAILABILITY', payload : false});
+        }
     } catch (error) {
         console.log(error)
         dispatch({ type: 'LOGIN_ERROR', error: error });

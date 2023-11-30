@@ -1,19 +1,25 @@
-import React, {useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuthState, useAuthDispatch } from '../context';
 import './Navbar.css';
 import accountPng from "../assets/images/account.jpg";
+import axios from 'axios';
+import LoginRegisterModal from './LoginRegisterModal.js';
+
+const client = axios.create({
+    baseURL: 'http://localhost:5000/users'
+});
+
+let userData;
 
 const Navbar = () => {
+
+    const [open, setOpen] = useState(false);
     const dispatch = useAuthDispatch();
-    const userData = useAuthState();
+    userData = useAuthState();
     const navigate = useNavigate();
-    // console.log(userData);
+
     let profile = userData.userDetails.upload;
-    // if (userData.userDetails !== "") {
-    //     profile = userData.userDetails.upload;
-    // }
-    // console.log(userData);
 
     const handleLogOut = (e) => {
         e.preventDefault();
@@ -21,6 +27,16 @@ const Navbar = () => {
         localStorage.removeItem("currentUser");
         localStorage.removeItem("userDetails");
         navigate('/');
+    }
+
+    const handleClose = () => {
+        setOpen(false);
+        console.log("handle close called!");
+    }
+
+    const handleOpen = () => {
+        setOpen(true);
+        console.log("handle open called!");
     }
 
     return (
@@ -33,34 +49,72 @@ const Navbar = () => {
 
                 </ul>
                 <ul className='common rgt'>
-                    <li ><Link to="/">Home</Link></li>
+                    <li ><Link to="/home">Home</Link></li>
                     <li ><Link to="/UserBoard">Hire</Link></li>
                     <li><Link to="/jobsection">Jobs</Link></li>
-                    <li><Link to="/personal">personal</Link></li>
-                    <li><Link to="/register"><span ></span> Sign Up</Link></li>
+                    {/* <li><Link to="/personal">personal</Link></li> */}
+                    {/* {!userData.auth &&
+                        <li><Link to="/register"><span ></span> Sign Up</Link></li>
+                    } */}
+                    {userData.userDetails && <Toggle />}
                     {userData.auth ?
                         <>
-                        <Toggle/>
-                        <li className='common' onClick={(e) => handleLogOut(e)}>
-                            <Link to="/">logOut</Link>
-                        </li>
+                            <li className='common' onClick={(e) => handleLogOut(e)}>
+                                <Link to="/">logOut</Link>
+                            </li>
                             <Link to="/personal">
-                                <img src={profile ? `http://localhost:5000/${profile}`: accountPng} alt="Not Found" style={{ height: '2em', width: '2em', borderRadius: '1em', marginRight: '1em' }}></img>
+                                <img src={profile ? `http://localhost:5000/${profile}` : accountPng} alt="Not Found" style={{ height: '2em', width: '2em', borderRadius: '1em', marginRight: '1em' }}></img>
                             </Link>
                         </>
                         :
-                        <li><Link to="/"> Login</Link></li>
+                        <li><Link onClick={handleOpen}> Login</Link></li>
                     }
                 </ul>
             </nav>
+            <LoginRegisterModal isOpen={open} onClose={handleClose} />
         </div>
     )
 }
 
+
 const Toggle = () => {
     const [available, setAvailable] = useState(false);
-    return(
-        <div className='availability_toggle' onClick={() => setAvailable(!available)}>
+    useEffect(() => {
+        // console.log("useEffect Called");
+        async function fetchAvailability() {
+            if (userData.userDetails._id) {
+                let res = await client.get(`/checkavailable/${userData.userDetails._id}`);
+
+                if (res.status === 200) {
+                    setAvailable(() => res.data.isAvailable);
+                } else {
+                    alert("someting went wrong");
+                }
+            }
+        }
+        fetchAvailability();
+    }, []);
+    const handleToggle = async () => {
+        setAvailable(() => (!available));
+        if (!available) {
+            let res = await client.get(`/makeavailable/${userData.userDetails._id}`);
+            if (res.status === 200) {
+                alert(res.data);
+            } else {
+                alert("someting went wrong");
+            }
+        } else {
+            let res = await client.get(`/makeunavailable/${userData.userDetails._id}`);
+            if (res.status === 200) {
+                alert(res.data);
+            } else {
+                alert("someting went wrong");
+            }
+        }
+
+    }
+    return (
+        <div className='availability_toggle' onClick={() => handleToggle()}>
             {!available ?
                 (<div className='toggle_shape not_available'> </div>) :
                 (<div className=' toggle_shape available'> </div>)

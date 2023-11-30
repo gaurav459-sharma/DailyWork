@@ -66,7 +66,7 @@
   margin-top: 10px;
 }
 .has-image{
-  position: relative;
+  /* position: relative; */
   text-align: center;
 }
 .our_values_img{
@@ -99,6 +99,7 @@
 }
 .teams_image{
   position: relative;
+  z-index: 1;
 }
 .teams_image img{
   height: 400px;
@@ -109,6 +110,7 @@
 }
 .teams_content{
   position: absolute;
+  z-index: 1;
   margin: 80px;
 }
 .teams_content p{
@@ -144,7 +146,7 @@
   justify-self: auto;
   padding-bottom: 50px;
   flex-wrap: wrap;
-  position: relative;
+  /* position: relative; */
   top: 0;
   transition: top ease 0.5s;
  }

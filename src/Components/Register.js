@@ -7,7 +7,8 @@ const client = axios.create({
     baseURL: 'http://localhost:5000/users'
 });
 
-export const Register = (props) => {
+const Register = ({ onClose }) => {
+
     const [email, setEmail] = useState('');
     const [password, setPass] = useState('');
     const [user_name, setName] = useState('');
@@ -15,7 +16,7 @@ export const Register = (props) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (localStorage.getItem("user")) {
+        if (localStorage.getItem("currentUser")) {
             navigate(-1);
         }
     }, []);
@@ -33,30 +34,42 @@ export const Register = (props) => {
 
     const handleResponse = (res) => {
         if (res.status === 201) {
-            // localStorage.setItem('user', email);
+            localStorage.setItem('currentUser', email);
             alert('user created successfully');
+            onClose();
             setEmail('');
             setPass('');
             setName('');
-            navigate("/");
+            // navigate("/");
         } else alert('error occurred!');
     }
 
     return (
         <div>
             <div className="parent_login">
-                <h2>Register</h2>
+                <h4>Register</h4>
                 <form className="register-form" onSubmit={handleSubmit}>
-                    <label htmlFor="name">Full name</label>
-                    <input value={user_name} name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="full Name" />
-                    <label htmlFor="email">Email</label>
-                    <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="abc@xyz.com" id="email" name="email" />
-                    <label htmlFor="password">password</label>
-                    <input value={password} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
-                    <button type="submit">Register</button>
+                    <div className="form_input">
+                        <input value={user_name} name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="Full name" />
+                    </div>
+
+                    <div className="form_input">
+                        <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Email" id="email" name="email" />
+                    </div>
+
+                    <div className="form_input">
+                        <input value={password} onChange={(e) => setPass(e.target.value)} type="password" placeholder="Password" id="password" name="password" />
+                    </div>
+
+                    <div className="form_input">
+                        <button type="submit">Register</button>
+                    </div>
+
                 </form>
-                <Link to='/' className="link-btn">Login here.</Link>
+                <Link className="link-btn" onClick={() => onClose()}>Login here.</Link>
             </div>
         </div>
     )
 }
+
+export default Register;
