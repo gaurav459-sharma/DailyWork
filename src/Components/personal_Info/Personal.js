@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import './Personal.css'
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Personal.css';
 import axios from 'axios';
 import { useAuthDispatch, logout } from '../../context/index';
+import {cities, suggestions} from '../UsersBoard/Testdata';
+import moment from 'moment';
 
 const client = axios.create({
     baseURL: 'http://localhost:5000/users'
@@ -21,7 +23,7 @@ const Personal = () => {
         dob: '',
         interest: '',
         state: '',
-        pin: '',
+        city: '',
         upload: '',
         subject: '',
         available : false
@@ -45,7 +47,7 @@ const Personal = () => {
                 dob: userData.dob,
                 interest:userData.interest,
                 state: userData.state,
-                pin: userData.pin,
+                city: userData.city,
                 subject: userData.subject,
                 available: userData.available
             }));
@@ -103,6 +105,7 @@ const Personal = () => {
 
                 <label htmlFor="state">State</label>
                 <select value={userDetails.state} onChange={(e) => handleChanage(e)} className='state' name="state" required>
+                    <option selected>select</option>
                     <option value="Uttarpradesh">UttarPradesh</option>
                     <option value="Delhi">Delhi</option>
                     <option value="Rajasthan">Rajasthan</option>
@@ -110,36 +113,35 @@ const Personal = () => {
 
                 <label htmlFor="Interest">Area of interest</label>
                 <select className='interest' value={userDetails.interest} onChange={(e) => handleChanage(e)} name='interest' required>
-                    <option value="Electrician">Electrician</option>
+                    {/* <option value="Electrician">Electrician</option>
                     <option value="Plumber">Plumber</option>
-                    <option value="Mechanic">Mechanic</option>
+                    <option value="Mechanic">Mechanic</option> */}
+                    <option selected>select</option>
+                    {suggestions.map(val => <option value={val}>{val}</option>)}
                 </select>
 
-                <p>Gender:</p>
-
-                <span className='gend'>
-                    <input value={'male'} onChange={(e) => handleChanage(e)} name='gender' className='gender' type="radio" />
-                    <label className='mf' htmlFor="male">Male</label>
-                </span>
-
-                <span className='gend'>
-                    <input name='gender' value={'female'} onChange={(e) => handleChanage(e)} className='gender' type="radio" />
-                    <label className='mf' htmlFor="female">Female</label>
-                </span>
+                <label htmlFor='gender'>Gender</label>
+                <select value={userDetails.gender} onChange={(e) => handleChanage(e)} className='gender' name="gender" required>
+                    <option selected>select</option>
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                </select>
 
                 <label htmlFor="phone">Phone:</label>
                 <input value={userDetails.phone} onChange={(e) => handleChanage(e)} className='text' type="tel" name="phone" id="phone" placeholder='phone no.' required />
-
-                <label htmlFor="phone">Pincode:</label>
-                <input value={userDetails.pin} onChange={(e) => handleChanage(e)} className='text' type="number" name="pin" id="Pin" placeholder='Pincode' required />
+                
+                <label htmlFor="city">City</label>
+                <select className = "city" value={userDetails.city} onChange={(e) => handleChanage(e)} name='city' required>
+                    <option selected>select</option>
+                    {cities.map(val => <option value={val}>{val}</option>)}
+                </select>
+                {/* <input value={userDetails.pin} onChange={(e) => handleChanage(e)} className='text' type="number" name="pin" id="Pin" placeholder='Pincode' required /> */}
 
                 <label htmlFor="dob">Date of birth:</label>
-                <input className='text' onChange={(e) => handleChanage(e)} type="date" name="dob" id="dob" placeholder='example:18' required></input>
+                <input className='text' value={moment(userDetails.dob).format('YYYY-MM-DD')} onChange={(e) => handleChanage(e)} type="date" name="dob" id="dob" placeholder='example:18' required></input>
 
                 <label htmlFor="upload">Photo Upload:</label>
                 <input type="file" name="upload" onChange={(e) => handleChanage(e)} className="upload" id="upload" required />
-
-
 
                 <label className='ay' htmlFor="subject">Abour Yourself</label>
                 <textarea value={userDetails.subject} onChange={(e) => handleChanage(e)} className='subject' name="subject" placeholder="Write something.." required></textarea>

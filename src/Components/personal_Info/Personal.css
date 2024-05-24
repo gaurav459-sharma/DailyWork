@@ -1,5 +1,5 @@
 
-.text, .state , .subject, .interest{
+.text, .state , .subject, .interest, .city, .gender{
     width: 100%; 
     padding: 12px;  
     border: 1px solid #ccc; 
@@ -38,13 +38,6 @@
     margin:auto;
 
   }
-  .gender{
-   margin-left: -48%;
-    
-  }
-  .gend{
-    display: flex;
-  }
   .mf{
     margin-left: -42%;
   }
@@ -57,7 +50,4 @@
     font-size: 18px; 
    margin-top: 10px;
    overflow-y: visible;
-   
-  
-
  }
