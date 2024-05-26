@@ -14,7 +14,7 @@ export const loginUSer = async (dispatch, loginDetails) => {
         // console.log(response);
         if (response.status === 200) {
             dispatch({type : "LOGIN_SUCCESS", payload : true});
-            await setUserDetails(dispatch, loginDetails.email);
+            await getUserDetails(dispatch, loginDetails.email);
             // await setAvailability(dispatch);
             return response;
         }
@@ -34,7 +34,7 @@ export const logout = async (dispatch) => {
     localStorage.removeItem("userDetails");
 }
 
-const setUserDetails = async (dispatch, email) => {
+export const getUserDetails = async (dispatch, email) => {
     try {
         let response = await client.get(`/personal/${email}`);
         let data = response.data;

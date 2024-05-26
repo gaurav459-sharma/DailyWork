@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Personal.css';
 import axios from 'axios';
-import { useAuthDispatch, logout } from '../../context/index';
+import { useAuthDispatch, logout, getUserDetails} from '../../context/index';
 import {cities, suggestions} from '../UsersBoard/Testdata';
 import moment from 'moment';
 
@@ -83,6 +83,7 @@ const Personal = () => {
         if (res.status === 201) {
             // dispatch({type : "SET_DETAILS", payload : userDetails});
             // localStorage.setItem("userDetails", JSON.stringify(userDetails));
+            getUserDetails(dispatch,userDetails.email);
             alert("personal details updated...");
             logout();
             navigate('/home');
